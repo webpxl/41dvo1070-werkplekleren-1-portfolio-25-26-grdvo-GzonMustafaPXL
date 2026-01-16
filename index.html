@@ -1,24 +1,277 @@
-<!DOCTYPE html>
-<html lang="nl">
+<!doctype html>
+<html lang='nl'>
 <head>
-    <meta charset="UTF-8">
-    <title>Portfolio – Gzon Mustafa</title>
-
-    <!-- Bootstrap CSS (lokaal) -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!-- Bootstrap Icons (lokaal) -->
-    <link rel="stylesheet" href="icons/bootstrap-icons.css">
+  <meta charset='utf-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <meta name='description' content='Portfolio van Gzon Mustafa (1 DVOD) - minimalistische website met projecten, skills en contact.' />
+  <title>Gzon Mustafa | Portfolio</title>
+  <link rel='stylesheet' href='css/styles.css' />
+  <link rel='icon' href='assets/favicon.svg' type='image/svg+xml' />
 </head>
-<body class="container mt-5">
+<body>
+  <a class='skip' href='#main'>Ga naar inhoud</a>
 
-<h1 class="mb-3">Gzon Mustafa</h1>
-<p class="text-muted">Portfolio – Werkplekleren</p>
+  <header class='header' data-header>
+    <div class='container header__inner'>
+      <a class='brand' href='index.html' aria-label='Home'>
+        <span class='brand__mark'>GM</span>
+        <span class='brand__text'>Gzon Mustafa</span>
+      </a>
 
-<button class="btn btn-primary mt-3">
-    <i class="bi bi-house-door-fill"></i>
-    Home
-</button>
+      <button class='iconbtn' type='button' data-nav-toggle aria-label='Menu'>
+        <span class='iconbtn__lines' aria-hidden='true'></span>
+      </button>
 
+      <nav class='nav' data-nav>
+        <a href='#over'>Over</a>
+        <a href='#projecten'>Projecten</a>
+        <a href='#skills'>Skills</a>
+        <a href='#speciaal'>Speciaal</a>
+        <a href='#contact'>Contact</a>
+        <a class='pill' href='portfolio/index.html'>/portfolio</a>
+        <button class='pill' type='button' data-theme-toggle aria-label='Thema wisselen'>Thema</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id='main'>
+    <section class='hero'>
+      <div class='container hero__inner'>
+        <div>
+          <p class='kicker'>1 DVOD • 19 jaar</p>
+          <h1>Minimalistisch portfolio voor digitale vormgeving & front-end.</h1>
+          <p class='lead'>Ik bouw duidelijke, snelle pagina’s in <strong>HTML</strong>, <strong>CSS</strong> en <strong>plain JavaScript</strong>, met oog voor structuur, typografie en gebruiksgemak.</p>
+          <div class='hero__cta'>
+            <a class='btn' href='#projecten'>Bekijk projecten</a>
+            <a class='btn btn--ghost' href='portfolio/index.html'>Lees reflecties</a>
+          </div>
+          <ul class='chips'>
+            <li>Responsive</li>
+            <li>Toegankelijk</li>
+            <li>Clean code</li>
+          </ul>
+        </div>
+        <div class='hero__card' aria-label='Snelle info'>
+          <dl>
+            <div><dt>Naam</dt><dd>Gzon Mustafa</dd></div>
+            <div><dt>Leeftijd</dt><dd>19</dd></div>
+            <div><dt>Klas</dt><dd>1 DVOD</dd></div>
+            <div><dt>Focus</dt><dd>UI/UX + Front-end</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section id='over' class='section'>
+      <div class='container grid2'>
+        <div>
+          <h2>Korte voorstelling</h2>
+          <p>Ik ben Gzon, student in 1 DVOD. Wat mij typeert is dat ik graag begin met de basis: een duidelijke wireframe, een nette HTML-structuur en daarna pas styling en interactie. Zo blijft een website leesbaar, onderhoudbaar en snel.</p>
+          <p>Ik koos voor deze opleiding omdat ik ontwerp en code wil combineren: iets dat er mooi uitziet én correct werkt. Ik ben een goede designer/programmeur omdat ik detailgericht ben, feedback vlot toepas en altijd probeer te bouwen alsof iemand anders later mijn code moet kunnen lezen.</p>
+        </div>
+        <div class='card'>
+          <h3>Waarvoor kan je me inzetten?</h3>
+          <ul class='list'>
+            <li>Landing pages en portfolio’s (HTML/CSS/JS)</li>
+            <li>UI-ontwerp: typografie, hiërarchie, spacing</li>
+            <li>Kleine interacties: tabs, filters, animaties</li>
+            <li>Basis toegankelijkheid & performance</li>
+          </ul>
+          <p class='muted'>Tip: bezoek ook het aparte deel op <a href='portfolio/index.html'>/portfolio</a> (situering + eindreflectie).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id='projecten' class='section section--alt'>
+      <div class='container'>
+        <div class='section__head'>
+          <h2>(School) projecten</h2>
+          <p class='muted'>Minstens 3 projecten, telkens met meerdere screenshots en wat ik zelf deed.</p>
+        </div>
+
+        <div class='filters' role='tablist' aria-label='Projectfilters'>
+          <button class='pill is-active' type='button' data-filter='all' role='tab' aria-selected='true'>Alles</button>
+          <button class='pill' type='button' data-filter='ui' role='tab'>UI</button>
+          <button class='pill' type='button' data-filter='web' role='tab'>Web</button>
+          <button class='pill' type='button' data-filter='js' role='tab'>JavaScript</button>
+        </div>
+
+        <div class='projects' data-projects>
+          <article class='project' data-category='ui web'>
+            <header class='project__head'>
+              <h3>Project 1: Albumcover (FMNEM)</h3>
+              <p class='muted'>Focus: compositie, typografie, kleurgrading</p>
+            </header>
+            <div class='project__grid'>
+              <div>
+                <p><strong>Wat was het?</strong> Een albumcover in een koele, futuristische stijl met sterke typografie op de achtergrond.</p>
+                <p><strong>Wat deed ik?</strong> Fotobewerking (kleurtoon + contrast), typografie plaatsen en afwerken, en details toevoegen (textuur, sticker/label) zodat het echt aanvoelt als een cover.</p>
+                <p><strong>Wat zie je?</strong> Een portret in groen/blauwe grading met grote, opvallende titel erboven. De krassen/textuur geven een “gedragen” look, alsof het een echte release is.</p>
+                <ul class='list'>
+                  <li>Hiërarchie: titel > beeld > details</li>
+                  <li>Kleur: cold look voor sfeer</li>
+                  <li>Afwerking: grain/textuur voor karakter</li>
+                </ul>
+              </div>
+              <div class='gallery'>
+                <figure>
+                  <img src='assets/project1-eminem.jpg' alt='Albumcover ontwerp: portret met blauwe typografie FMNEM' loading='lazy' />
+                  <figcaption class='caption'>Definitieve cover: sterke titel + sfeerbeeld.</figcaption>
+                </figure>
+                <figure>
+                  <img src='assets/project1-2.svg' alt='Detailweergave van de lay-out en typografie (mockup)' loading='lazy' />
+                  <figcaption class='caption'>Extra view: lay-out en spacing (mockup).</figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class='project' data-category='ui web'>
+            <header class='project__head'>
+              <h3>Project 2: Carmina Burana (stage-opdracht)</h3>
+              <p class='muted'>Focus: drukwerk, hiërarchie, leesbaarheid</p>
+            </header>
+            <div class='project__grid'>
+              <div>
+                <p><strong>Wat was het?</strong> Een flyer/affiche voor het concert <em>Carmina Burana</em>, uitgewerkt voor druk (stage).</p>
+                <p><strong>Wat deed ik?</strong> Ik werkte de typografische hiërarchie uit (titel, datum, locatie), plaatste de tekstblokken netjes uitgelijnd en zorgde dat het geheel professioneel en leesbaar bleef op afstand.</p>
+                <p><strong>Wat zie je?</strong> Een donkere, stijlvolle lay-out met een groot titelblok bovenaan. Op de foto zie je meerdere exemplaren gedrukt, met een warm beeld van een cello dat de klassieke sfeer versterkt.</p>
+                <ul class='list'>
+                  <li>Typografie: duidelijke titel en datum</li>
+                  <li>Grid: tekstblokken netjes uitgelijnd</li>
+                  <li>Drukwerk: contrast en marges gecontroleerd</li>
+                </ul>
+              </div>
+              <div class='gallery'>
+                <figure>
+                  <img src='assets/project2-carmina-burana.jpg' alt='Gedrukte flyers voor Carmina Burana op een tafel' loading='lazy' />
+                  <figcaption class='caption'>Stage-resultaat: drukwerk met sterke hiërarchie.</figcaption>
+                </figure>
+                <figure>
+                  <img src='assets/project2-2.svg' alt='Mockup: detail van teksthiërarchie en layout' loading='lazy' />
+                  <figcaption class='caption'>Extra view: tekstindeling en spacing (mockup).</figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class='project' data-category='ui web'>
+            <header class='project__head'>
+              <h3>Project 3: Wenskaart met boodschap</h3>
+              <p class='muted'>Focus: concept, typografie, visuele impact</p>
+            </header>
+            <div class='project__grid'>
+              <div>
+                <p><strong>Wat was het?</strong> Een wenskaart/poster die vooral werkt op typografie en een duidelijke, krachtige boodschap.</p>
+                <p><strong>Wat deed ik?</strong> Ik zocht een sterke tekst, experimenteerde met schaal (heel grote letters) en maakte lagen/overlappingen om energie en dynamiek te geven, zonder de leesbaarheid te verliezen.</p>
+                <p><strong>Wat zie je?</strong> Grote rode typografie die bijna het hele vlak vult, met transparante lagen erachter en het jaartal rechtsboven. Alles draait rond impact: je leest de boodschap meteen.</p>
+                <ul class='list'>
+                  <li>Impact door schaal en gewicht</li>
+                  <li>Kleurcontrast: rood op wit</li>
+                  <li>Lagen voor diepte en ritme</li>
+                </ul>
+              </div>
+              <div class='gallery'>
+                <figure>
+                  <img src='assets/project3-wenskaart.png' alt='Wenskaart ontwerp met grote rode tekst en jaartal 2025' loading='lazy' />
+                  <figcaption class='caption'>Wenskaart: boodschap eerst, design ondersteunt.</figcaption>
+                </figure>
+                <figure>
+                  <img src='assets/project3-2.svg' alt='Mockup: extra compositie- of detailweergave' loading='lazy' />
+                  <figcaption class='caption'>Extra view: variatie/detail (mockup).</figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class='section__head' style='margin-top:2rem;'>
+          <h2>Niet-schoolprojecten</h2>
+          <p class='muted'>Enkele dingen buiten de les, om initiatief te tonen.</p>
+        </div>
+
+        <div class='cards'>
+          <article class='card'>
+            <h3>Mini Brand Kit</h3>
+            <p>Oefening in logo-varianten, kleurpalet en typografische combinaties. Doel: consistente look in verschillende formaten.</p>
+          </article>
+          <article class='card'>
+            <h3>Website audit (familie/kennis)</h3>
+            <p>Korte analyse van navigatie en leesbaarheid, met een lijst snelle verbeteringen: contrast, koppen, CTA’s en mobiel gedrag.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id='skills' class='section'>
+      <div class='container grid2'>
+        <div>
+          <h2>Skills</h2>
+          <p class='muted'>Wat ik vandaag al toepas (en waarop ik verder bouw).</p>
+          <ul class='list'>
+            <li><strong>HTML</strong>: semantiek, duidelijke structuur, formulieren</li>
+            <li><strong>CSS</strong>: grid/flex, responsive, states, tokens</li>
+            <li><strong>JavaScript</strong>: DOM, events, kleine features, localStorage</li>
+            <li><strong>Werkwijze</strong>: plan → bouw → test → verbeter</li>
+          </ul>
+        </div>
+        <div class='card'>
+          <h3>Technische vereisten (check)</h3>
+          <ul class='list'>
+            <li>Enkel HTML, CSS en plain JavaScript</li>
+            <li>Responsive voor smartphone, tablet en desktop</li>
+            <li>Header • Main • Footer met secties & articles</li>
+            <li>Privacy-link aanwezig (privacy.txt)</li>
+            <li>Bronnen en AI-tools vermeld in README.md</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id='speciaal' class='section section--alt'>
+      <div class='container'>
+        <div class='section__head'>
+          <h2>Speciale sectie</h2>
+          <p class='muted'>Iets persoonlijks dat past bij mijn ontwikkeling.</p>
+        </div>
+        <div class='card'>
+          <h3>Mijn werkroutine: klein maar consequent</h3>
+          <p>Ik probeer te werken zoals het vroeger ook vaak gebeurde: eerst orde en structuur, dan pas “extra’s”. Ik start met een lijst taken, maak een simpele planning en check mijn werk op leesbaarheid en details (marges, titels, consistentie). Dat klinkt klassiek, maar het werkt.</p>
+          <p class='muted'>Waarom dit telt: consistentie is een skill. En in webdesign zie je dat meteen.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id='contact' class='section'>
+      <div class='container grid2'>
+        <div>
+          <h2>Contact</h2>
+          <p>Wil je feedback geven of samenwerken aan een klein project? Stuur gerust een bericht.</p>
+          <p class='muted'>In deze demo staat geen echt e-mailadres. Vervang dit met je eigen gegevens.</p>
+        </div>
+        <form class='card form' data-contact-form>
+          <label>
+            Naam
+            <input name='name' autocomplete='name' required />
+          </label>
+          <label>
+            Bericht
+            <textarea name='message' rows='4' required></textarea>
+          </label>
+          <button class='btn' type='submit'>Versturen</button>
+          <p class='muted' data-form-status role='status' aria-live='polite'></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class='footer'>
+    <div class='container footer__inner'>
+      <p>© <span id='year'></span> Gzon Mustafa • <a href='privacy.txt'>Privacy</a> • <a href='portfolio/index.html'>/portfolio</a></p>
+      <p class='muted'>Gemaakt met HTML/CSS/JS. Deploy via GitHub Pages of Netlify.</p>
+    </div>
+  </footer>
+
+  <script src='js/main.js' defer></script>
 </body>
 </html>
